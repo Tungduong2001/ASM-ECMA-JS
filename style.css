@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#navbar li a{
+    @apply hover:text-[#696969] duration-500 text-sm;
+}
+#intro{
+    @apply leading-8;
+}
+#intro p a{
+    @apply hover:text-black text-blue-600;
+}
