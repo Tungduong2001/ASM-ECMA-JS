@@ -8,11 +8,11 @@ const Header = {
                             <img src="https://fptshop.com.vn/Content/Landing/logo-mb.png" width="150px">
                         </a>
                     </figure>
-                    <form action="" class="w-[700px] mt-5 pl-10 flex">
-                        <input type="text" class="h-12 w-10/12 pl-3"
+                    <form action="" class="w-[700px] mt-5 pl-10 flex ">
+                        <input type="text" class="h-10 w-10/12 pl-3 rounded-sm"
                             placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm">
                         <button class="h-10"><i
-                                class="fas fa-search bg-[#333333] text-white pt-5 pb-3 px-5 mb-5"></i></button>
+                                class="fas fa-search bg-[#333333] text-white py-3 px-4 rounded-sm"></i></button>
                     </form>
                     <div class="flex mt-5 text-center">
                         <div class="news pr-5">
@@ -31,8 +31,16 @@ const Header = {
                             </a>
                         </div>
                         <div class="cart">
-                            <i class="fas fa-shopping-cart text-white"></i>
-                            <p class="text-white text-xs">Giỏ hàng</p>
+                            <a href="">
+                                <i class="fas fa-shopping-cart text-white"></i>
+                                <p class="text-white text-xs">Giỏ hàng</p>
+                            </a>
+                        </div>
+                        <div class="signin pl-5">
+                            <a href="">
+                                <i class="fas fa-user text-white"></i>
+                                <p class="text-white text-xs">Đăng Nhập</p>
+                            </a>
                         </div>
                     </div>
                 </div>
