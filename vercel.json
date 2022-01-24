@@ -1,24 +1,24 @@
 {
-    "routers": [
+    "routes": [
         {
             "src": "/",
-            "desk": "/"
-        },
-        {
-            "src": "/signin",
-            "desk": "/"
-        },
-        {
-            "src": "/signup",
-            "desk": "/"
+            "dest": "/"
         },
         {
             "src": "/phones",
-            "desk": "/"
-        }, 
+            "dest": "/"
+        },
         {
             "src": "/laptop",
-            "desk": "/"
+            "dest": "/"
+        },
+        {
+            "src": "/signin",
+            "dest": "/"
+        },
+        {
+            "src": "/signup",
+            "dest": "/"
         }
     ]
 }
