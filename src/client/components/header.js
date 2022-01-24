@@ -15,11 +15,12 @@ const Header = {
                                 class="fas fa-search bg-[#333333] text-white py-3 px-4 rounded-sm"></i></button>
                     </form>
                     <div class="flex mt-5 text-center">
-                        <div class="news pr-5">
+                        <div class="news pr-5 ">
                             <a href="">
-                                <i class="far fa-file-alt text-white"></i>
+                                <i class="far fa-file-alt text-white " ></i>
                                 <p class="text-white text-xs">Thông tin hay</p>
                             </a>
+                            
                         </div>
                         <div class="water pr-5">
                             <a href="">
@@ -341,6 +342,14 @@ const Header = {
                                     <i class="fas fa-percent"></i>
                                     <span class="">khuyễn mãi</span>
                                 </a>       
+                                <div class=" gap-x-64 mt-0 border-2 max-h-[300px] absolute w-[200px]  bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-3 transition-all decoration-slate-500 ">
+                                    <ul class="menu-item">
+                                        <div class="menu-item-info text-sm leading-7 mb-4">
+                                            <li><a href="">Thông tin trao thưởng</a></li>
+                                            <li><a href="">Tất cả khuyến mại</a></li>
+                                        </div>
+                                    </ul>
+                                </div>        
                             </li>
 
                             <li class="group">

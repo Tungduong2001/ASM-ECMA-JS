@@ -22,4 +22,39 @@
 .nav-bar{
     @apply text-center group-hover:text-[#00ccaa] uppercase inline-block;
 }
+.product{
+    @apply bg-white ml-2 my-1 hover:border-[1px] text-center relative overflow-hidden ;
+}
+.product-name{
+    @apply mb-2 font-bold text-lg mx-auto hover:text-blue-600;
+}
+.product-price{
+    @apply text-red-700 mr-5 font-bold text-lg;
+}
+.product-image{
+    @apply overflow-hidden ;
+}
+.product-image img{
+    @apply mx-auto w-[170px] group-hover:scale-105 transition-all;
+}
+.add-to-cart{
+    @apply bg-red-700 min-w-full bottom-0 translate-y-[120px] ease-in-out absolute animate-[fadeout] duration-[1s];
+}
 
+.product:hover .add-to-cart{
+    @apply translate-y-[0px] ease-in-out animate-[fadein] duration-[1s];
+}
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+@keyframes fadeout{
+    from{
+        opacity: 1;
+    }to{
+        opacity: 0;
+    }
+}
