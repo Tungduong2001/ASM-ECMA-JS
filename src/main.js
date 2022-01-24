@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-spacing */
 import Navigo from "navigo";
 import HomePage from "./client/page/home";
 
