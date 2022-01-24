@@ -1,13 +1,8 @@
 const Product = {
     render() {
         return /* html */ `
-            <div class="mt-5 mx-auto w-[1200px]">
-                <h2
-                    class="bg-[#1c1c1c] text-white text-lg rounded-[15px] w-[250px] h-[50px] leading-[50px] pl-8 uppercase font-bold ">
-                    Apple
-                </h2>
-            </div>
             <div class=" bg-white border-8 rounded-md mt-5 mx-auto w-[1200px]"> 
+                <i class="fab fa-hotjar text-[#cd1817] font-black text-2xl uppercase ml-2 mt-4 mb-4 font-mono">  Khuyến mãi hot</i>
                 <div class="grid grid-cols-4 gap-5">
                     <a href="">
                         <div class="group product">
