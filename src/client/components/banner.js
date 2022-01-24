@@ -1,10 +1,10 @@
 const Banner = {
     render() {
         return /* html */ `
-            <div class="ml-28 bg-white border-8 rounded-md w-10/12">
+            <div class=" bg-white border-8 rounded-md mx-auto w-[1200px] mt-6">
                 <img class="" src="https://images.fpt.shop/unsafe/fit-in/1190x300/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/1/17/637780589940859482_F-H6_1190x300%20(2).png"
                     alt=""> 
-                <ul class="flex p-2">
+                <ul class="flex justify-around text-center px-4 py-2">
                     <li class="block text-gray-700 text-sm hover:text-black hover:font-medium"><a href="">iPhone 13 Pro Max lì xì đến 6 triệu</a></li>
                     <li class="block text-gray-700 text-sm hover:text-black hover:font-medium"><a href="">Sắm vivo lì xì đến 1,5 triệu</a></li>
                     <li class="block text-gray-700 text-sm hover:text-black hover:font-medium"><a href="">Hàng gia dụng lì xì đến 6 triệu</a></li>
@@ -13,7 +13,6 @@ const Banner = {
                     <li class="block text-gray-700 text-sm hover:text-black hover:font-medium"><a href="">Sắm vivo lì xì đến 1,5 triệu</a></li>
                     <li class="block text-gray-700 text-sm hover:text-black hover:font-medium"><a href="">Sử dụng Xiaomi lì xì đến 6 triệu</a></li>
                 </ul>
-            
             </div>
         `;
     },

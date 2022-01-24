@@ -10,3 +10,16 @@
 #intro p a{
     @apply hover:text-black text-blue-600;
 }
+.menu-item{
+    @apply text-black pl-5 pt-3 border-r-[1px] ;
+}
+.menu-item-title{
+    @apply font-bold text-base pb-2;
+}
+#navbar ul li a span {
+    @apply uppercase;
+}
+.nav-bar{
+    @apply text-center group-hover:text-[#00ccaa] uppercase inline-block;
+}
+

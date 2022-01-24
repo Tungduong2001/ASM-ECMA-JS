@@ -1,7 +1,7 @@
 const Catebox = {
     render() {
         return /* html */ `
-            <div class="ml-28 bg-white border-8 rounded-md w-10/12 mt-5">
+            <div class=" bg-white border-8 rounded-md mt-5 mx-auto w-[1200px] ">
                <div href="" class="grid grid-cols-6 border-collapse rounded-md">
                     <a href="">
                         <div class="text-center border-2 pt-4 pb-4 hover:border-slate-900">
