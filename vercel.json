@@ -2,23 +2,23 @@
     "routers": [
         {
             "src": "/",
-            "dest": "/"
+            "desk": "/"
         },
         {
             "src": "/signin",
-            "dest": "/"
+            "desk": "/"
         },
         {
             "src": "/signup",
-            "dest": "/"
+            "desk": "/"
         },
         {
             "src": "/phones",
-            "dest": "/"
+            "desk": "/"
         }, 
         {
             "src": "/laptop",
-            "dest": "/"
+            "desk": "/"
         }
     ]
 }
