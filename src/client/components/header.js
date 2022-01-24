@@ -38,7 +38,7 @@ const Header = {
                             </a>
                         </div>
                         <div class="signin pl-5">
-                            <a href="">
+                            <a href="/signin">
                                 <i class="fas fa-user text-white"></i>
                                 <p class="text-white text-xs">Đăng Nhập</p>
                             </a>
@@ -49,7 +49,7 @@ const Header = {
                     <nav class="w-[1200px] mx-auto  text-white" id="navbar">
                         <ul class="flex justify-around py-3 relative">
                             <li class="group">
-                                <a href="" class="nav-bar">
+                                <a href="/phones" class="nav-bar">
                                     <i class="fas fa-mobile-alt"></i>
                                     <span class="">Điện thoại</span>
                                 </a>
@@ -114,7 +114,7 @@ const Header = {
                             </li>
 
                             <li class="group">
-                                <a href="" class="nav-bar">
+                                <a href="/laptop" class="nav-bar">
                                     <i class="fas fa-laptop"></i>
                                     <span class="">laptop</span>
                                 </a>
