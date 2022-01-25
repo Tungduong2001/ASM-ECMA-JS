@@ -45,13 +45,13 @@
     @apply translate-y-[0px] ease-in-out animate-[fadein] duration-[1s];
 }
 .catebox{
-    @apply text-center border-2 pt-4 pb-4 hover:border-slate-900
+    @apply text-center border-2 pt-4 pb-4 hover:border-slate-900;
 }
 .box-accessory{
     @apply flex flex-row mx-[13px];
 }
 .accessory{
-    @apply  border-[1px] text-center  hover:border-[3px] mx-auto w-[145px] h-[145px]
+    @apply  border-[1px] text-center  hover:border-[3px] mx-auto w-[145px] h-[145px];
 } 
 @keyframes fadein {
     from{
