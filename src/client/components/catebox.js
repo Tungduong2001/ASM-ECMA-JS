@@ -4,7 +4,7 @@ const Catebox = {
             <div class=" bg-white border-8 rounded-md mt-5 mx-auto w-[1200px] ">
                <div href="" class="grid grid-cols-6 border-collapse rounded-md">
                     <a href="">
-                        <div class="text-center border-2 pt-4 pb-4 hover:border-slate-900">
+                        <div class="catebox">
                             <figure class="w-24 h-24 bg-[#ccc] ml-11 rounded-full mb-2"> 
                                 <img class="ml-4 pt-5" src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/https://fptshop.com.vn/Uploads/images/v5d/dien-thoai.png">
                             </figure>
@@ -12,7 +12,7 @@ const Catebox = {
                         </div>
                     </a>
                     <a href="">
-                        <div class="text-center border-2 pt-4 pb-4 hover:border-slate-900">
+                        <div class="catebox">
                             <figure class="w-24 h-24 bg-[#ccc] ml-11 rounded-full mb-2"> 
                                 <img class="ml-4 pt-5" src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/https://fptshop.com.vn/Uploads/images/v5d/laptop.png">
                             </figure>
@@ -20,7 +20,7 @@ const Catebox = {
                         </div>
                     </a>
                     <a href="">
-                        <div class="text-center border-2 pt-4 pb-4 hover:border-slate-900">
+                        <div class="catebox">
                             <figure class="w-24 h-24 bg-[#ccc] ml-11 rounded-full mb-2"> 
                                 <img class="ml-4 pt-5" src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/https://fptshop.com.vn/Uploads/images/v5d/apple.png">
                             </figure>
@@ -28,7 +28,7 @@ const Catebox = {
                         </div>
                     </a>
                     <a href="">
-                        <div class="text-center border-2 pt-4 pb-4 hover:border-slate-900">
+                        <div class="catebox">
                             <figure class="w-24 h-24 bg-[#ccc] ml-11 rounded-full mb-2">
                                 <img class="ml-4 pt-5" src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/https://fptshop.com.vn/Uploads/images/2015/Other/chuyentrangsamsung8_7.png">
                             </figure>
@@ -36,7 +36,7 @@ const Catebox = {
                         </div>
                     </a>
                     <a href="">
-                        <div class="text-center border-2 pt-4 pb-4 hover:border-slate-900">
+                        <div class="catebox">
                             <figure class="w-24 h-24 bg-[#ccc] ml-11 rounded-full mb-2">
                                 <img class="ml-4 pt-5" src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/https://fptshop.com.vn/Uploads/images/2015/Other/giadung.png">
                             </figure>
@@ -44,7 +44,7 @@ const Catebox = {
                         </div>
                     </a>
                     <a href="">
-                        <div class="text-center border-2 pt-4 pb-4 hover:border-slate-900">
+                        <div class="catebox">
                             <figure class="w-24 h-24 bg-[#ccc] ml-11 rounded-full mb-2">
                                 <img class="ml-4 pt-5" src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/https://fptshop.com.vn/Uploads/images/v5d/xiaomi2.png">
                             </figure>
@@ -54,7 +54,7 @@ const Catebox = {
                </div>
                <div href="" class="grid grid-cols-6 border-collapse rounded-md">
                     <a href=""> 
-                        <div class="text-center border-2 pt-4 pb-4 hover:border-slate-900">
+                        <div class="catebox">
                             <figure class="w-24 h-24 bg-[#ccc] ml-11 rounded-full mb-2"> 
                                 <img class="ml-4 pt-5" src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/https://fptshop.com.vn/Uploads/images/v5d/may_cu.png">
                             </figure>
@@ -62,7 +62,7 @@ const Catebox = {
                         </div>
                     </a>
                     <a href="">
-                        <div class="text-center border-2 pt-4 pb-4 hover:border-slate-900">
+                        <div class="catebox">
                             <figure class="w-24 h-24 bg-[#ccc] ml-11 rounded-full mb-2"> 
                                 <img class="ml-4 pt-5" src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/https://fptshop.com.vn/Uploads/images/2015/Other/tablet0409.png">
                             </figure>
@@ -70,7 +70,7 @@ const Catebox = {
                         </div>
                     </a>
                     <a href="">
-                        <div class="text-center border-2 pt-4 pb-4 hover:border-slate-900">
+                        <div class="catebox">
                             <figure class="w-24 h-24 bg-[#ccc] ml-11 rounded-full mb-2"> 
                                 <img class="ml-4 pt-5" src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/https://fptshop.com.vn/Uploads/images/v5d/smart-watch.png">
                             </figure>
@@ -78,7 +78,7 @@ const Catebox = {
                         </div>
                     </a>
                     <a href="">
-                        <div class="text-center border-2 pt-4 pb-4 hover:border-slate-900">
+                        <div class="catebox">
                             <figure class="w-24 h-24 bg-[#ccc] ml-11 rounded-full mb-2">
                                 <img class="ml-4 pt-5" src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/https://fptshop.com.vn/Uploads/images/2015/Other/donghothoitrang1308.png">
                             </figure>
@@ -86,7 +86,7 @@ const Catebox = {
                         </div>
                     </a>
                     <a href="">
-                        <div class="text-center border-2 pt-4 pb-4 hover:border-slate-900">
+                        <div class="catebox">
                             <figure class="w-24 h-24 bg-[#ccc] ml-11 rounded-full mb-2">
                                 <img class="ml-4 pt-5" src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/https://fptshop.com.vn/Uploads/images/2015/PC1512.png">
                             </figure>
@@ -94,7 +94,7 @@ const Catebox = {
                         </div>
                     </a>
                     <a href="">
-                        <div class="text-center border-2 pt-4 pb-4 hover:border-slate-900">
+                        <div class="catebox">
                             <figure class="w-24 h-24 bg-[#ccc] ml-11 rounded-full mb-2">
                                 <img class="ml-4 pt-5" src="https://images.fpt.shop/unsafe/fit-in/60x60/filters:quality(90):fill(transparent)/https://fptshop.com.vn/Uploads/images/v5d/may-in.png">
                             </figure>
