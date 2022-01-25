@@ -53,6 +53,9 @@
 .accessory{
     @apply  border-[1px] text-center hover:border-[3px] mx-auto w-[145px] h-[145px];
 } 
+.service:hover{
+    @apply scale-105 transition-all
+}
 @keyframes fadein {
     from{
         opacity: 0;
