@@ -51,7 +51,7 @@
     @apply flex flex-row mx-[13px];
 }
 .accessory{
-    @apply  border-[1px] text-center  hover:border-[3px] mx-auto w-[145px] h-[145px];
+    @apply  border-[1px] text-center hover:border-[3px] mx-auto w-[145px] h-[145px];
 } 
 @keyframes fadein {
     from{
