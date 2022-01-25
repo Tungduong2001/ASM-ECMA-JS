@@ -8,6 +8,7 @@ import BannerTablet from "./bannerTablet";
 import TabletSale from "./tabletSale";
 import BannerBottom from "./bannerBottom";
 import HotAccessory from "./accessory";
+import Service from "./service";
 
 const Content = {
     render() {
@@ -22,6 +23,7 @@ const Content = {
             ${TabletSale.render()}
             ${BannerBottom.render()}
             ${HotAccessory.render()}
+            ${Service.render()}
         `;
     },
 };

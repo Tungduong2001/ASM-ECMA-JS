@@ -7,7 +7,7 @@ const HomePage = {
         return /* html */ `
         <div class="container bg-red-700 min-w-full m-auto">
             ${Header.render()}
-            <div class="mb-10">
+            <div class="">
                 ${Content.render()}
             </div>
             ${Footer.render()}
