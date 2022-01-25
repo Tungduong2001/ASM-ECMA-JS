@@ -2,7 +2,7 @@ const PhoneSale = {
     render() {
         return /* html */ `
             <div class=" bg-white border-8 rounded-md mt-5 mx-auto w-[1200px]"> 
-                <i class="fab fa-hotjar text-[#cd1817] font-black text-2xl uppercase ml-2 mt-4 mb-4 font-mono">  Khuyến mãi hot</i>
+                <i class="fab fa-hotjar text-[#cd1817] font-black text-2xl uppercase ml-2 mt-4 mb-4">  Khuyến mãi hot</i>
                 <div class="grid grid-cols-4 gap-5">
                     <a href="">
                         <div class="group product">
