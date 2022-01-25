@@ -54,7 +54,13 @@
     @apply  border-[1px] text-center hover:border-[3px] mx-auto w-[145px] h-[145px];
 } 
 .service:hover{
-    @apply scale-105 transition-all
+    @apply scale-105 transition-all;
+}
+.radio{
+    @apply  text-center border-[1px] rounded-md hover:bg-slate-200;
+}
+.phone-color{
+    @apply mx-auto mt-3 border-[1px] p-2 rounded-md hover:border-red-700 ;
 }
 @keyframes fadein {
     from{
