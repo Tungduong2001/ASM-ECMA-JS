@@ -19,6 +19,10 @@
         {
             "src": "/signup",
             "dest": "/"
+        },
+        {
+            "src": "/productDetail",
+            "dest": "/"
         }
     ]
 }
