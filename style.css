@@ -62,6 +62,16 @@
 .phone-color{
     @apply mx-auto mt-3 border-[1px] p-2 rounded-md hover:border-red-700 ;
 }
+.box-Promo{
+    @apply border-[1px] mt-5 ;
+}
+.boxPromo-list{
+    @apply border-b-[1px] py-2 pl-2;
+}
+.content-promo{
+    @apply text-sm ml-2 leading-5;
+}
+
 @keyframes fadein {
     from{
         opacity: 0;

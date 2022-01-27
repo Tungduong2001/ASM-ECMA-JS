@@ -8,7 +8,7 @@ const HotAccessory = {
                 <div class="box-accessory">
                     <a href="" >
                         <div class="accessory">
-                            <i class="fas fa-crown text-[36px] text-slate-400  mt-7"></i>
+                            <i class="fas fa-award text-[36px] text-slate-400  mt-7"></i>
                             <p class="font-medium mt-6">Phụ kiện nổi bật</p>
                         </div>
                     </a>
