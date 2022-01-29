@@ -63,22 +63,22 @@ const ProductDetail = {
                         </div>
                         <div class="mt-2 bg-slate-100 grid grid-cols-4 rounded-md">
                             <label class="radio">
-                                <input type="radio" class="form-radio" name="GB" value="personal">
+                                <input type="radio" class="form-radio" name="GB" value="">
                                 <span class="ml-1 font-bold">128GB</span>
                                 <span class="block">30.990.000₫</span>
                             </label>
                             <label class="radio">
-                                <input type="radio" class="form-radio" name="GB" value="busines">
+                                <input type="radio" class="form-radio" name="GB" value="">
                                 <span class="ml-1 font-bold">256GB</span>
                                 <span class="block">33.490.000₫</span>
                             </label>
                             <label class="radio">
-                                <input type="radio" class="form-radio" name="GB" value="busines">
+                                <input type="radio" class="form-radio" name="GB" value="">
                                 <span class="ml-1 font-bold">512GB</span>
                                 <span class="block">40.990.000₫</span>
                             </label>
                             <label class="radio">
-                                <input type="radio" class="form-radio" name="GB" value="busines">
+                                <input type="radio" class="form-radio" name="GB" value="">
                                 <span class="ml-1 font-bold">1TB</span>
                                 <span class="block">45.990.000₫</span>
                             </label>

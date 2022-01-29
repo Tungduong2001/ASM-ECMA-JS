@@ -69,7 +69,7 @@
     @apply border-b-[1px] py-2 pl-2;
 }
 .content-promo{
-    @apply text-sm ml-2 leading-5;
+    @apply text-sm ml-3 leading-5 grid;
 }
 
 @keyframes fadein {
