@@ -71,7 +71,24 @@
 .content-promo{
     @apply text-sm ml-3 leading-5 grid;
 }
-
+.more-content{
+    @apply hidden text-[14px];
+}
+.read-more{
+    @apply p-1 mb-3 underline hover:text-blue-600
+}
+.product-parameter{
+    @apply border-[1px] ml-4 w-[400px] h-full
+}
+.parameter{
+    @apply grid grid-cols-2 
+}
+.detail-items{
+    @apply font-medium
+}
+.content-prameter{
+    @apply text-[13px] ml-3 my-auto
+}
 @keyframes fadein {
     from{
         opacity: 0;
