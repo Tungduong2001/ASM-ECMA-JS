@@ -1,5 +1,5 @@
 const Header = {
-    render() {
+    render(AuthLogin) {
         return /* html */`
             <header class="">
                 <div class="header-top bg-red-700 flex justify-between h-[80px] w-[1200px] m-auto">
@@ -38,10 +38,33 @@ const Header = {
                             </a>
                         </div>
                         <div class="signin pl-5">
-                            <a href="/signin">
-                                <i class="fas fa-user text-white"></i>
-                                <p class="text-white text-xs">Đăng Nhập</p>
-                            </a>
+                            ${AuthLogin ?/* html */ `
+                                ${AuthLogin.role == 1 ? /* html */`
+                                    <span>
+                                        <a href="/admin/dashboard">
+                                            <i class="fas fa-user text-white"></i>
+                                            <p class="text-white text-xs">
+                                                ${AuthLogin.username}
+                                            </p>
+                                        </a>
+                                        <a onclick="logout()" class="cursor-pointer text-white text-xs">Thoát</a>
+                                    </span>
+                                `: /* html */`
+                                    <span>
+                                        <i class="fas fa-user text-white"></i>
+                                        <p class="text-white text-xs">
+                                            ${AuthLogin.username}
+                                            <a onclick="logout()" class="cursor-pointer">Thoát</a>
+                                        </p>
+                                    </span>
+                                `}
+                                 ` : /* html */ `
+                                <a href="/signin">
+                                    <i class="fas fa-user text-white"></i>
+                                    <p class="text-white text-xs">Đăng Nhập</p>
+                                </a>
+                            `}
+                            
                         </div>
                     </div>
                 </div>

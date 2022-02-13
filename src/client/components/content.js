@@ -11,16 +11,16 @@ import HotAccessory from "./accessory";
 import Service from "./service";
 
 const Content = {
-    render() {
+    async render() {
         return /* html */ `
             ${Promotion.render()}
             ${Banner.render()}
             ${Catebox.render()}
-            ${PhoneSale.render()}
+            ${await PhoneSale.render()}
             ${BannerIphone.render()}
-            ${LaptopSale.render()}
+            ${await LaptopSale.render()}
             ${BannerTablet.render()}
-            ${TabletSale.render()}
+            ${await TabletSale.render()}
             ${BannerBottom.render()}
             ${HotAccessory.render()}
             ${Service.render()}
