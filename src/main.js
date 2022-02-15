@@ -5,7 +5,7 @@ import Signup from "./client/login/signup";
 import HomePage from "./client/page/home";
 import Laptop from "./client/page/laptop";
 import PhoneProduct from "./client/page/phone";
-import ProductDetail from "./client/page/productDetail";
+import ProductDetail from "./client/page/product/productDetail";
 import Dashboard from "./admin/Dashboard";
 import AddProducts from "./admin/products/AddProduct";
 import ListProducts from "./admin/products/ListProducts";
@@ -13,6 +13,8 @@ import EditProducts from "./admin/products/EditProduct";
 import ListUsers from "./admin/users/ListUser";
 import AddUsers from "./admin/users/AddUser";
 import EditUsers from "./admin/users/EditUserInfo";
+import Category from "./admin/categories/Category";
+import ListCategory from "./admin/categories/ListCategory";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -42,7 +44,7 @@ router.on({
     "/signup": () => print(Signup),
     "/phones": () => print(PhoneProduct),
     "/laptop": () => print(Laptop),
-    "/productDetail": () => print(ProductDetail),
+    "/productDetail/:id": ({ data }) => print(ProductDetail, data.id),
     "/admin/dashboard": () => print(Dashboard),
     "/admin/products": () => print(ListProducts),
     "/admin/products/add": () => print(AddProducts),
@@ -50,7 +52,8 @@ router.on({
     "/admin/users": () => print(ListUsers),
     "/admin/users/add": () => print(AddUsers),
     "/admin/users/:id/edit": ({ data }) => print(EditUsers, data),
-
+    "/admin/category/add": () => print(Category),
+    "/admin/category": () => print(ListCategory)
 });
 
 router.resolve();

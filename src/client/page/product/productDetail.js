@@ -1,9 +1,10 @@
-import Header from "../components/header";
-import Footer from "../components/footer";
-import StarRating from "../components/starRating";
-
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import StarRating from "../../components/starRating";
+import { FindOneProduct } from "../../../api/products";
+import Storage from "../../../utils/Storage";
 const ProductDetail = {
-    render() {
+    async render(id) {
         $(document).ready(() => {
             $(".read-more").click(function () {
                 $(this).prev().toggle();
@@ -15,13 +16,15 @@ const ProductDetail = {
                 }
             });
         });
+        const { data } = await FindOneProduct(id);
+        const authLogin = Storage.get("user");
         return /* html */ `
-            <div class="bg-red-700">
-                ${Header.render()}
-            </div>
-        <div class="mx-auto w-[1200px] my-10">
+            <header class="bg-red-700">
+                ${await Header.render(authLogin)}
+            </header>
+            <div class="mx-auto w-[1200px] my-10">
             <div class="grid grid-cols-2 mb-3">
-                <h2 class="font-bold text-xl ">iPhone 13 Pro Max 128GB</h2>
+                <h2 class="font-bold text-xl ">${data.name}</h2>
                 <div class="mt-2 flex justify-end">
                     <a href="" class="mt-1">${StarRating.render()}</a>
                     <a href="" class="ml-2 text-sky-600 hover:underline relative hover:font-semibold">13 đánh giá</a>
@@ -33,7 +36,7 @@ const ProductDetail = {
                 <div class="mr-3">
                     <div class="border-[1px]">
                         <a href="">
-                            <img src="https://images.fpt.shop/unsafe/fit-in/960x640/filters:quality(90):fill(white):upscale()/fptshop.com.vn/Uploads/Originals/2021/11/4/637716443491808351_4.jpg">
+                            <img src="${data.avatar}">
                         </a>
                     </div>
                     <div class="flex flex-row justify-center">
@@ -77,8 +80,8 @@ const ProductDetail = {
                 </div>
                 <div class="detail">
                     <div class="flex ">
-                        <span class="text-red-700 font-semibold text-2xl mr-5 mt-2">30.990.000₫</span>
-                        <span class="font-semibold text-lg line-through mt-3">30.990.000₫</span>
+                        <span class="text-red-700 font-semibold text-2xl mr-5 mt-2">${data.price}</span>
+                        <span class="font-semibold text-lg line-through mt-3">${data.cost}</span>
                         <span class="ml-52">Trả góp chỉ từ 3.000.500₫/tháng</span>
                     </div>
                     <div class="mt-2 bg-slate-100 grid grid-cols-4 rounded-md">
@@ -365,5 +368,8 @@ const ProductDetail = {
         </div>
         `;
     },
+    afterRender() {
+        Header.afterRender();
+    }
 };
 export default ProductDetail;

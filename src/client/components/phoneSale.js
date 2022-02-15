@@ -8,7 +8,7 @@ const PhoneSale = {
                 <i class="fab fa-hotjar text-[#cd1817] font-black text-2xl uppercase ml-2 mt-4 mb-4">  Khuyến mãi hot</i>
                 <div class="grid grid-cols-4 gap-5">
                     ${data.map((product) => /* html */ `
-                        <a href="">
+                        <a href="/productDetail/${product.id}">
                             <div class="group product">
                                 <div class="product-image">
                                     <img src="${product.avatar}" alt="">

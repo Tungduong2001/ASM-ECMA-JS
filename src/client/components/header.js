@@ -1,7 +1,9 @@
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
+import { reRender } from "../../utils/reRender";
 const Header = {
-    render(AuthLogin) {
+    async render(AuthLogin) {
         return /* html */`
-            <header class="">
                 <div class="header-top bg-red-700 flex justify-between h-[80px] w-[1200px] m-auto">
                     <figure class="logo pt-5">
                         <a href="/">
@@ -47,14 +49,14 @@ const Header = {
                                                 ${AuthLogin.username}
                                             </p>
                                         </a>
-                                        <a onclick="logout()" class="cursor-pointer text-white text-xs">Thoát</a>
+                                        <a id="logout" class="cursor-pointer text-white text-xs">Thoát</a>
                                     </span>
                                 `: /* html */`
                                     <span>
                                         <i class="fas fa-user text-white"></i>
                                         <p class="text-white text-xs">
                                             ${AuthLogin.username}
-                                            <a onclick="logout()" class="cursor-pointer">Thoát</a>
+                                            <a id="logout" class="cursor-pointer">Thoát</a>
                                         </p>
                                     </span>
                                 `}
@@ -384,9 +386,17 @@ const Header = {
                         </ul>
                     </nav>
                 </div>
-            </header>
         `;
     },
+    afterRender() {
+        const logout = document.querySelector("#logout");
+        logout.addEventListener("click", () => {
+
+            toastr.success("Đã đăng xuất");
+            localStorage.removeItem("user");
+            reRender(Header, "header")
+        })
+    }
 };
 
 export default Header;

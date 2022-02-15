@@ -8,7 +8,9 @@ const HomePage = {
         const authLogin = Storage.get("user");
         return /* html */ `
         <div class="container bg-red-700 min-w-full m-auto">
-            ${Header.render(authLogin)}
+        <header>
+            ${await Header.render(authLogin)}
+        </header>
             <div class="">
                 ${await Content.render()}
             </div>
@@ -16,6 +18,9 @@ const HomePage = {
         </div>
         `;
     },
+    afterRender() {
+        Header.afterRender();
+    }
 };
 
 export default HomePage;

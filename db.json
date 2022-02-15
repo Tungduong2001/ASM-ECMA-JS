@@ -4,7 +4,7 @@
       "email": "bktduong@gmail.com",
       "password": "$2a$10$iILywebhPKzgF7.eRjYXWOc0s6v46RDO7L5utwnyUx4nXl.tdYbUK",
       "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1644652658/vyi3pc0cjt8br3csp0qe.jpg",
-      "username": "Tùng Dương 3D",
+      "username": "Tùng Dương",
       "role": "1",
       "id": 3
     },
@@ -15,63 +15,22 @@
       "username": "yone",
       "role": "0",
       "id": 4
-    },
-    {
-      "email": "hungtv3@gmail.com",
-      "password": "$2a$10$k5ZZpzPg7WYL34yJUHl1IueY0tPV4Nl633sL4UvSU5khM9XH/Is5q",
-      "username": "hihi",
-      "role": "0",
-      "id": 5
-    },
-    {
-      "email": "tungduong.kaka64@gmail.com",
-      "password": "$2a$10$VLyQSZE7rSqukjn8drqcZ.Cn8KFw5jy1IBEW7SdBEWVgMUZhSv1cK",
-      "username": "tduong",
-      "role": "0",
-      "id": 6
-    },
-    {
-      "email": "tungduong@gmail.com",
-      "password": "$2a$10$bhXGsNG.yX51Acm99TmhQuosIFpLiruOH1A1IdovNWBt/6SZDKs/S",
-      "username": "Tung dương",
-      "role": "0",
-      "id": 7
-    },
-    {
-      "email": "tungduong@gmail.com.vn",
-      "password": "$2a$10$jQHAfEo4IUR2RDN/kPGo4u1h/3cAMtB09v0LK2PeIz8uX0GD3hANq",
-      "username": "Tung dương",
-      "role": "0",
-      "id": 8
-    },
-    {
-      "email": "duong1@gmail.com",
-      "password": "$2a$10$K00XoN8Faw/LaIsOTD1bvOtcdWTRoBL7uD4iMZbY/MbSXrpZsHnEO",
-      "username": "Tùng Dương",
-      "role": "0",
-      "id": 9
     }
   ],
   "products": [
     {
-      "id": 1,
-      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1644588239/qsjxtcycalez3sm6qxft.jpg",
-      "name": "ô tô",
-      "price": "10000USD",
-      "cost": "12000USD"
-    },
+      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1644914310/fw6xllexoiiujfwwp8cz.jpg",
+      "name": "iPhone 13 Pro Max 128GB",
+      "price": "30.990.000₫",
+      "cost": "33.990.000₫",
+      "id": 1
+    }
+  ],
+  "categories": [
     {
-      "id": 3,
-      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1644592187/goc37heqgbep6lxbnp0a.jpg",
-      "title": "hi",
-      "content": "ggg"
-    },
-    {
-      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1644640726/mikgc36lgqkaaf22ydav.jpg",
-      "name": "ip13pro",
-      "price": "30000000",
-      "discount": "33333333",
-      "id": 4
+      "name": "iP 13 ProMax",
+      "type": "Điện thoại",
+      "id": 2
     }
   ]
 }
