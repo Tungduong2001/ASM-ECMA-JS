@@ -24,7 +24,7 @@
       "name": "iPhone 13 128GB",
       "price": "22990000",
       "cost": "24990000",
-      "categorieId":3
+      "categorieId": "3"
     },
     {
       "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645161069/iog2ds2gm9zthofokymw.jpg",
@@ -33,13 +33,6 @@
       "price": "20999000",
       "cost": "21999000",
       "id": "Nbh1Uue"
-    },
-    {
-      "id": "Ek_dnrt",
-      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645164915/fdpb2jpwltv3pdbeu3ij.jpg",
-      "name": "iPhone 13 Pro Max 128GB",
-      "price": "30990000",
-      "cost": "33990000"
     },
     {
       "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645164957/cby0phxsqljvgpz4vmrg.jpg",
@@ -56,6 +49,22 @@
       "price": "30990000",
       "cost": "34999000",
       "categorieId": "2"
+    },
+    {
+      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645197186/vait8fak7hpq0skyuduo.jpg",
+      "name": "iPhone 11 64GB",
+      "categorieId": "3",
+      "price": "15999000",
+      "cost": "16999000",
+      "id": "z0X1V4p"
+    },
+    {
+      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645197263/h7m6pxtkjn7yqb2qp2qp.jpg",
+      "name": "iPhone 13 Pro Max 128GB",
+      "categorieId": "3",
+      "price": "32990000",
+      "cost": "33990000",
+      "id": "B0Lzfli"
     }
   ],
   "categories": [

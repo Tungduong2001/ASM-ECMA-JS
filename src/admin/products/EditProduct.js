@@ -1,4 +1,5 @@
 import axios from "axios";
+import { getAllCates } from "../../api/category";
 import { FindOneProduct, UpdateOneProduct } from "../../api/products";
 import HeaderDashboard from "../HeaderDashboard";
 
@@ -7,7 +8,7 @@ const EditProducts = {
         const formHandle = document.querySelector("#formHandle");
         const imgPreview = document.querySelector('#previewImage');
 
-        formHandle.addEventListener("change", (e) => {
+        formHandle.avatar.addEventListener("change", (e) => {
             imgPreview.src = URL.createObjectURL(formHandle.avatar.files[0])
         });
         formHandle.onsubmit = async (e) => {
@@ -26,7 +27,6 @@ const EditProducts = {
                     },
                     data: formData
                 });
-
                 imgUploadedLink = data.url
             }
 
@@ -36,8 +36,8 @@ const EditProducts = {
                 name: formHandle.name.value,
                 price: formHandle.price.value,
                 cost: formHandle.cost.value,
+                categorieId: formHandle.type.value
             }
-
             UpdateOneProduct(payload).then(res => {
                 location.href = "/admin/products"
             })
@@ -45,6 +45,7 @@ const EditProducts = {
     },
     render: async function ({ id }) {
         const { data } = await FindOneProduct(id)
+        const cate = await getAllCates();
         return /* html */ `
             <div class="min-h-full">
                 ${HeaderDashboard.render()}
@@ -70,6 +71,11 @@ const EditProducts = {
                                         <label class="block mb-1 font-semibold">Name</label>
                                         <input type="text" name="name" class="px-[10px] py-1 border rounded w-full focus:outline-0" value="${data.name}">
                                     </div>
+                                    <select class="mb-3" id="type" name="type">
+                                        ${cate.data.map(item =>/* html */ `
+                                            <option value="${item.id}" ${item.id == data.categorieId ? "selected" : ""}>${item.name}</option>
+                                        `).join("")}
+                                    </select>
                                     <div class="mb-3">
                                         <label class="block mb-1 font-semibold">Price</label>
                                         <input type="text" name="price" class="px-[10px] py-1 border rounded w-full focus:outline-0" value="${data.price}">

@@ -5,18 +5,21 @@ import { FindOneProduct } from "../../../api/products";
 import Storage from "../../../utils/Storage";
 const ProductDetail = {
     async render(id) {
-        $(document).ready(() => {
-            $("#read-more").click(function () {
-                console.log(1);
-                $(this).prev().toggle();
-                $(this).siblings(".dots").toggle();
-                if ($(this).text() == "Thu gọn") {
-                    $(this).text("Đọc thêm");
-                } else {
-                    $(this).text("Thu gọn");
-                }
-            });
-        });
+        // $(document).ready(() => {
+        //     $("#read-more").click(function () {
+        //         console.log(1);
+        //         $(this).prev().toggle();
+        //         $(this).siblings(".dots").toggle();
+        //         if ($(this).text() == "Thu gọn") {
+        //             $(this).text("Đọc thêm");
+        //         } else {
+        //             $(this).text("Thu gọn");
+        //         }
+        //     });
+        // });
+
+
+
         const { data } = await FindOneProduct(id);
         const authLogin = Storage.get("user");
         return /* html */ `
@@ -246,8 +249,8 @@ const ProductDetail = {
                 <p class="text-[14px] leading-[1.8] mb-3">Với iPhone 13 Pro Max phần tai thỏ đã được thu gọn lại 20% so với thế hệ trước, không chỉ giải phóng nhiều
                     không gian hiển thị hơn mà còn giúp mặt trước chiếc điện thoại trở nên hấp dẫn hơn mà vẫn đảm bảo được hoạt
                     động của các cảm biến.</p>
-                <span class="dots">...</span>
-                <span class="more-content">
+                <span id="dots">...</span>
+                <span id="more-content" class="hidden">
                     <img class="my-3" src="https://uqoojcos5nobj.vcdn.cloud/uploads/2021/09/iphone-moi-2021-04.jpg">
                     <p class="leading-[1.8] mb-3">Điểm thay đổi dễ dàng nhận biết trên iPhone 13 Pro Max chính là kích thước của cảm biến camera sau
                         được làm to hơn và để tăng độ nhận diện cho sản phẩm mới thì Apple cũng đã bổ sung một tùy chọn màu sắc
@@ -349,6 +352,16 @@ const ProductDetail = {
         `;
     },
     afterRender() {
+        const readMore = document.querySelector("#read-more")
+        const dots = document.querySelector("#dots")
+        const moreContent = document.querySelector("#more-content")
+        let isToggle = false
+        readMore.onclick = function () {
+            isToggle = !isToggle
+            dots.classList.toggle("hidden", !isToggle)
+            moreContent.classList.toggle("hidden", isToggle)
+            readMore.textContent = isToggle ? "Đọc thêm" : "Thu gọn"
+        }
         Header.afterRender();
     }
 };
