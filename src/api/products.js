@@ -8,6 +8,10 @@ export const FindOneProduct = (id) => {
     const url = `/products/${id}`;
     return instance.get(url);
 }
+export const ProductGetById = (id) => {
+    const url = `/products?categorieId=${id}`;
+    return instance.get(url);
+}
 export const FindAllProducts = () => {
     const url = "/products";
     return instance.get(url);

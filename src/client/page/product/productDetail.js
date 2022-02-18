@@ -6,7 +6,8 @@ import Storage from "../../../utils/Storage";
 const ProductDetail = {
     async render(id) {
         $(document).ready(() => {
-            $(".read-more").click(function () {
+            $("#read-more").click(function () {
+                console.log(1);
                 $(this).prev().toggle();
                 $(this).siblings(".dots").toggle();
                 if ($(this).text() == "Thu gọn") {
@@ -39,28 +40,7 @@ const ProductDetail = {
                             <img src="${data.avatar}">
                         </a>
                     </div>
-                    <div class="flex flex-row justify-center">
-                        <a href="" class="mt-3 text-center hover:font-bold">
-                            <img class="phone-color"
-                                src="https://images.fpt.shop/unsafe/fit-in/40x40/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/9/15/637673217820889289_iphone-13-pro-max-vang-1.jpg">
-                            <p class="ml-3">Vàng</p>
-                        </a>
-                        <a href="" class="mt-3 text-center hover:font-bold ml-3">
-                            <img class="phone-color "
-                                src="https://images.fpt.shop/unsafe/fit-in/40x40/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/9/15/637673217826201634_iphone-13-pro-max-xanh-1.jpg">
-                            <p class="ml-3">Xanh</p>
-                        </a>
-                        <a href="" class="mt-3 text-center hover:font-bold ml-3">
-                            <img class="phone-color"
-                                src="https://images.fpt.shop/unsafe/fit-in/40x40/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/9/15/637673217819795830_iphone-13-pro-max-xam-1.jpg">
-                            <p class="ml-3">Xám</p>
-                        </a>
-                        <a href="" class="mt-3 text-center hover:font-bold ml-3">
-                            <img class="phone-color"
-                                src="https://images.fpt.shop/unsafe/fit-in/40x40/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/9/15/637673217819171028_iphone-13-pro-max-bac-1.jpg">
-                            <p class="ml-3">Bạc</p>
-                        </a>
-                    </div>
+                    
                     <div class="flex mt-3 justify-center">
                         <div class="flex mr-2">
                             <i class="fas fa-award text-red-700  mr-2"></i>
@@ -80,8 +60,8 @@ const ProductDetail = {
                 </div>
                 <div class="detail">
                     <div class="flex ">
-                        <span class="text-red-700 font-semibold text-2xl mr-5 mt-2">${data.price}</span>
-                        <span class="font-semibold text-lg line-through mt-3">${data.cost}</span>
+                        <span class="text-red-700 font-semibold text-2xl mr-5 mt-2">${currencyPrice(data.price)}</span>
+                        <span class="font-semibold text-lg line-through mt-3">${currencyPrice(data.cost)}</span>
                         <span class="ml-52">Trả góp chỉ từ 3.000.500₫/tháng</span>
                     </div>
                     <div class="mt-2 bg-slate-100 grid grid-cols-4 rounded-md">
@@ -315,7 +295,7 @@ const ProductDetail = {
                         được các điểm nổi bật của người tiền nhiệm, nổi bật với cải tiến về cấu hình, thời lượng pin cũng như
                         camera và nhiều điều còn chờ bạn khám phá.</p>
                 </span>
-                <button class="read-more">Đọc thêm</button>
+                <button id="read-more">Đọc thêm</button>
             </div>
             <div class="product-parameter">
                 <h2 class="uppercase text-[16px] font-bold border-b-[1px] mt-2 pl-1">Thông số kĩ thuật</h2>

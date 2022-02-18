@@ -5,6 +5,10 @@ import HeaderDashboard from "../HeaderDashboard";
 const AddUsers = {
     afterRender() {
         const formHandle = document.querySelector("#formHandle");
+        const imgPreview = document.querySelector('#previewImage');
+        formHandle.addEventListener("change", (e) => {
+            imgPreview.src = URL.createObjectURL(formHandle.avatar.files[0])
+        });
         formHandle.onsubmit = (e) => {
             e.preventDefault();
 
@@ -56,6 +60,7 @@ const AddUsers = {
                             <div class="mb-3">
                                 <label class="block mb-1 font-semibold">Avatar</label>
                                 <input type="file" name="avatar" class="px-[10px] py-1 border rounded w-full focus:outline-0">
+                                <div class="mt-3"><img width="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/832px-No-Image-Placeholder.svg.png" id="previewImage" /></div>
                             </div>
                             <div class="mb-3">
                                 <label class="block mb-1 font-semibold">Username</label>

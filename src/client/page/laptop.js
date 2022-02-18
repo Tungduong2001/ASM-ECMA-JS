@@ -3,10 +3,10 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 
 const Laptop = {
-    render() {
+    async render() {
         return /* html */ `
             <div class="container bg-red-700 min-w-full m-auto">
-                ${Header.render()}
+                ${await Header.render()}
                 ${BannerProduct.render()}
                 <div class="mt-5 mx-auto w-[1200px]">
                     <h2

@@ -34,7 +34,7 @@ const Header = {
                             </a>
                         </div>
                         <div class="cart">
-                            <a href="">
+                            <a href="/cart">
                                 <i class="fas fa-shopping-cart text-white"></i>
                                 <p class="text-white text-xs">Giỏ hàng</p>
                             </a>

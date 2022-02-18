@@ -20,6 +20,7 @@ const HomePage = {
     },
     afterRender() {
         Header.afterRender();
+        Content.afterRender()
     }
 };
 

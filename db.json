@@ -6,7 +6,7 @@
       "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1644652658/vyi3pc0cjt8br3csp0qe.jpg",
       "username": "Tùng Dương",
       "role": "1",
-      "id": 3
+      "id": "3"
     },
     {
       "email": "duong@gmail.com",
@@ -14,23 +14,65 @@
       "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1644589326/ruhipcef0sdvppykdlv4.jpg",
       "username": "yone",
       "role": "0",
-      "id": 4
+      "id": "4"
     }
   ],
   "products": [
     {
-      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1644914310/fw6xllexoiiujfwwp8cz.jpg",
+      "id": "GA2WyIt",
+      "avatar": "http://res.cloudinary.com/asm-js-ecma/image/upload/v1645170730/esg5myrrdlpptarh6iuu.jpg",
+      "name": "iPhone 13 128GB",
+      "price": "22990000",
+      "cost": "24990000",
+      "categorieId":3
+    },
+    {
+      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645161069/iog2ds2gm9zthofokymw.jpg",
+      "name": "iPhone 12 64GB",
+      "categorieId": "3",
+      "price": "20999000",
+      "cost": "21999000",
+      "id": "Nbh1Uue"
+    },
+    {
+      "id": "Ek_dnrt",
+      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645164915/fdpb2jpwltv3pdbeu3ij.jpg",
       "name": "iPhone 13 Pro Max 128GB",
-      "price": "30.990.000₫",
-      "cost": "33.990.000₫",
-      "id": 1
+      "price": "30990000",
+      "cost": "33990000"
+    },
+    {
+      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645164957/cby0phxsqljvgpz4vmrg.jpg",
+      "name": "iPad Pro 11 2021 M1 Wi-Fi 128GB",
+      "categorieId": "4",
+      "price": "20999000",
+      "cost": "22999000",
+      "id": "6ZE4jyT"
+    },
+    {
+      "id": "n0Xb9O9",
+      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645165564/l4l6kbfsgtle2txrsjyj.jpg",
+      "name": "MacBook Pro 13",
+      "price": "30990000",
+      "cost": "34999000",
+      "categorieId": "2"
     }
   ],
   "categories": [
     {
-      "name": "iP 13 ProMax",
-      "type": "Điện thoại",
-      "id": 2
+      "name": "Macbook",
+      "type": "1",
+      "id": "2"
+    },
+    {
+      "name": "iPhone",
+      "type": "0",
+      "id": "3"
+    },
+    {
+      "name": "iPad",
+      "type": "2",
+      "id": "4"
     }
   ]
 }

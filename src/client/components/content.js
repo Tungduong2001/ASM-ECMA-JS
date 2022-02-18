@@ -26,6 +26,11 @@ const Content = {
             ${Service.render()}
         `;
     },
+    afterRender() {
+        PhoneSale.afterRender()
+        TabletSale.afterRender()
+        LaptopSale.afterRender()
+    }
 };
 
 export default Content;

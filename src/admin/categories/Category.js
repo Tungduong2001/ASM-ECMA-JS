@@ -10,7 +10,7 @@ const Category = {
             <header class="bg-white shadow">
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 <h1 class="text-3xl font-bold text-gray-900">
-                Add Products
+                Add Cate
                 </h1>
             </div>
             </header>
@@ -25,9 +25,9 @@ const Category = {
                                 <input type="text" id="catename" class="px-[10px] py-1 border rounded w-full focus:outline-0">
                             </div>
                             <select class="mb-3" id="type">
-                                <option type="0">Điện thoại</option>
-                                <option type="1">Laptop</option>
-                                <option type="2">Apple</option>
+                                <option value="0">Điện thoại</option>
+                                <option value="1">Laptop</option>
+                                <option value="2">Tablet</option>
                             </select>
                             <div class="text-right pt-3">
                                 <button type="submit" class="mr-1 uppercase border text-[12px] min-w-[150px] border-gray-400 px-3 py-1 rounded hover:bg-gray-200 shadow-inner hover:shadow-gray-400 hover:shadow-sm hover:border-gray-500 duration-300 inline-block">ADD</button>
@@ -48,9 +48,7 @@ const Category = {
             addCates({
                 name: document.getElementById("catename").value,
                 type: document.getElementById("type").value
-            }).then(
-                window.location.href = "/admin/category"
-            )
+            }).then(res => window.location.href = "/admin/category")
         })
     }
 }

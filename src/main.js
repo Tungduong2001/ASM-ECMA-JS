@@ -15,6 +15,7 @@ import AddUsers from "./admin/users/AddUser";
 import EditUsers from "./admin/users/EditUserInfo";
 import Category from "./admin/categories/Category";
 import ListCategory from "./admin/categories/ListCategory";
+import CartPage from "./client/page/cart";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -53,7 +54,8 @@ router.on({
     "/admin/users/add": () => print(AddUsers),
     "/admin/users/:id/edit": ({ data }) => print(EditUsers, data),
     "/admin/category/add": () => print(Category),
-    "/admin/category": () => print(ListCategory)
+    "/admin/category": () => print(ListCategory),
+    "/cart": () => print(CartPage)
 });
 
 router.resolve();

@@ -89,6 +89,12 @@
 .content-prameter{
     @apply text-[13px] ml-3 my-auto
 }
+#table{
+    @apply w-[1200px] mx-auto text-center
+}
+#table td th{
+    @apply border-black
+}
 @keyframes fadein {
     from{
         opacity: 0;
