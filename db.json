@@ -45,7 +45,7 @@
     {
       "id": "n0Xb9O9",
       "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645165564/l4l6kbfsgtle2txrsjyj.jpg",
-      "name": "MacBook Pro 13",
+      "name": "MacBook Pro 13\" 2020 Touch Bar M1 256GB",
       "price": "30990000",
       "cost": "34999000",
       "categorieId": "2"
@@ -65,6 +65,54 @@
       "price": "32990000",
       "cost": "33990000",
       "id": "B0Lzfli"
+    },
+    {
+      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645200456/rc2d5w3h67cgme8vlvpv.jpg",
+      "name": "MacBook Pro 16\" 2021 M1 Pro 512GB",
+      "categorieId": "2",
+      "price": "65990000",
+      "cost": "66990000",
+      "id": "vp1vVGP"
+    },
+    {
+      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645200590/nnl88x508wxklxjjn7tx.jpg",
+      "name": "MacBook Pro 14\" 2021 M1 Pro Ram 32GB",
+      "categorieId": "2",
+      "price": "62990000",
+      "cost": "63990000",
+      "id": "4Br8GIO"
+    },
+    {
+      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645200683/ahrmrms0nuvnigxa3nma.jpg",
+      "name": "MacBook Air 13\" 2020 M1 256GB",
+      "categorieId": "2",
+      "price": "27999000",
+      "cost": "28999000",
+      "id": "95yM5B4"
+    },
+    {
+      "id": "4f8oNP2",
+      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645200806/nvinjghwaca8eme43wrc.jpg",
+      "name": "iPad Air 10.9 2020 M1 Wi-Fi 64GB",
+      "price": "16999000",
+      "cost": "17999000",
+      "categorieId": "4"
+    },
+    {
+      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645200921/c7jtln7ipfnxggtiyd7b.jpg",
+      "name": "iPad Air 10.9 2020 Wi-Fi + Cellular 64GB ",
+      "categorieId": "4",
+      "price": "20999000",
+      "cost": "21999000",
+      "id": "JI0XpkH"
+    },
+    {
+      "avatar": "https://res.cloudinary.com/asm-js-ecma/image/upload/v1645200993/eoyfyfgoi7uqniztoe4z.jpg",
+      "name": "iPad Pro 12.9 2021 M1 Wi-Fi 5G 128GB ",
+      "categorieId": "4",
+      "price": "34999000",
+      "cost": "35999000",
+      "id": "U2VdmtV"
     }
   ],
   "categories": [
