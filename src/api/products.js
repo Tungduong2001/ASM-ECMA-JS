@@ -24,3 +24,7 @@ export const UpdateOneProduct = (payload) => {
     const url = `/products/${payload.id}`;
     return instance.put(url, payload);
 }
+export const SearchProductByName = (keyword) => {
+    const url = `/products?name_like=${keyword}`;
+    return instance.get(url);
+}

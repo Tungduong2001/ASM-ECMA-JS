@@ -10,8 +10,8 @@ const Header = {
                             <img src="https://fptshop.com.vn/Content/Landing/logo-mb.png" width="150px">
                         </a>
                     </figure>
-                    <form action="" class="w-[700px] mt-5 pl-10 flex ">
-                        <input type="text" class="h-10 w-10/12 pl-3 rounded-sm"
+                    <form action="/search" class="w-[700px] mt-5 pl-10 flex ">
+                        <input name="keyword" type="text" class="h-10 w-10/12 pl-3 rounded-sm"
                             placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm">
                         <button class="h-10"><i
                                 class="fas fa-search bg-[#333333] text-white py-3 px-4 rounded-sm"></i></button>

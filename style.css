@@ -23,7 +23,7 @@
     @apply text-center group-hover:text-[#00ccaa] uppercase inline-block;
 }
 .product{
-    @apply bg-white ml-2 my-1 hover:border-[1px] text-center relative overflow-hidden ;
+    @apply bg-white ml-2 my-1 hover:border-[1px] border border-transparent hover:border-gray-400  text-center relative overflow-hidden pt-4;
 }
 .product-name{
     @apply mb-2 font-bold text-lg mx-auto hover:text-blue-600;
@@ -71,10 +71,10 @@
 .content-promo{
     @apply text-sm ml-3 leading-5 grid;
 }
-.more-content{
-    @apply hidden text-[14px];
+#more-content{
+    @apply  text-[14px];
 }
-.read-more{
+#read-more{
     @apply p-1 mb-3 underline hover:text-blue-600
 }
 .product-parameter{

@@ -5,9 +5,15 @@ import HeaderDashboard from "../HeaderDashboard";
 const EditUsers = {
     afterRender({ id }) {
         const formHandle = document.querySelector("#formHandle");
+        const imgPreview = document.querySelector('#previewImage');
+
+        formHandle.avatar.addEventListener("change", (e) => {
+            imgPreview.src = URL.createObjectURL(formHandle.avatar.files[0])
+        });
+
         formHandle.onsubmit = async (e) => {
             e.preventDefault();
-            let avatarImage = "";
+            let imgUploadedLink = "";
             if (formHandle.avatar.files[0]) {
                 const formData = new FormData();
                 formData.append("file", formHandle.avatar.files[0]);
@@ -21,16 +27,13 @@ const EditUsers = {
                     },
                     data: formData
                 });
-
-                avatarImage = data.secure_url;
-            } else {
-                avatarImage = formHandle.avatarOld.value;
+                imgUploadedLink = data.url
             }
 
             const payload = {
                 id: formHandle.id.value,
                 role: formHandle.role.value,
-                avatar: avatarImage,
+                avatar: imgUploadedLink ? imgUploadedLink : imgPreview.src,
                 username: formHandle.username.value,
             }
 
@@ -60,9 +63,8 @@ const EditUsers = {
                                     <input type="hidden" name="role" value="${data.role}">
                                     <div class="mb-3">
                                         <label class="block mb-1 font-semibold">Avatar</label>
-                                        <img class="w-36 h-36 border border-gray-600 object-cover mb-2" src="${data.avatar}">
                                         <input type="file" name="avatar" class="px-[10px] py-1 border rounded w-full focus:outline-0">
-                                        <input type="hidden" name="avatarOld" value="${data.avatar}">
+                                        <div><img width="200" src="${data.avatar}" id="previewImage" /></div>
                                     </div>
                                     <div class="mb-3">
                                         <label class="block mb-1 font-semibold">Username</label>
