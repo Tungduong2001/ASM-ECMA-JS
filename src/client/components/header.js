@@ -1,8 +1,13 @@
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
+import { getCatesType } from "../../api/category";
 import { reRender } from "../../utils/reRender";
 const Header = {
     async render(AuthLogin) {
+        const iPhone = await getCatesType("0")
+        const iPad = await getCatesType("2")
+        const MacBook = await getCatesType("1")
+        const AppleWatch = await getCatesType("3")
         return /* html */`
                 <div class="header-top bg-red-700 flex justify-between h-[80px] w-[1200px] m-auto">
                     <figure class="logo pt-5">
@@ -82,25 +87,18 @@ const Header = {
                                     <ul class="menu-item w-[500px]">
                                         <li class="menu-item-title">HÃNG SẢN XUẤT</li>
                                         <div class="menu-item-info grid grid-cols-3 text-sm leading-7 mb-4">
-                                            <li><a href="">Apple(iPhone)</a></li>
-                                            <li><a href="">Samsung</a></li>
-                                            <li><a href="">Xiaomi</a></li>
-                                            <li><a href="">Oppo</a></li>
-                                            <li><a href="">Nokia</a></li>
-                                            <li><a href="">Vivo</a></li>
-                                            <li><a href="">Bphone</a></li>
-                                            <li><a href="">Realme</a></li>
-                                            <li><a href="">Masstel</a></li>
+                                            ${iPhone.data.map(item =>/* html */`
+                                            <li><a href="/${item.name}/${item.id}">${item.name}</a></li>
+                                            `)}
+                                            ${iPad.data.map(item =>/* html */`
+                                            <li><a href="/${item.name}/${item.id}">${item.name}</a></li>
+                                            `)}
                                         </div>
                                         <li class="menu-item-title"><a href="">ĐỒNG HỒ THÔNG MINH</a></li>
                                         <div class="menu-item-info grid grid-cols-3 text-sm leading-7 ">
-                                            <li><a href="">Apple Watch</a></li>
-                                            <li><a href="">Samsung</a></li>
-                                            <li><a href="">Xiaomi</a></li>
-                                            <li><a href="">Oppo</a></li>
-                                            <li><a href="">Masstel</a></li>
-                                            <li><a href="">Garmin</a></li>
-                                            <li><a href="">Huewei</a></li>
+                                            ${AppleWatch.data.map(item =>/* html */`
+                                            <li><a href="/${item.name}/${item.id}">${item.name}</a></li>
+                                            `)}
                                         </div>
                                     </ul>
                                     <div class="text-black">
@@ -147,14 +145,9 @@ const Header = {
                                     <ul class="menu-item w-[500px]">
                                         <li class="menu-item-title">HÃNG SẢN XUẤT</li>
                                         <div class="menu-item-info grid grid-cols-3 text-sm leading-7 mb-4">
-                                            <li><a href="">Apple(MacBook)</a></li>
-                                            <li><a href="">Acer</a></li>
-                                            <li><a href="">Microsoft</a></li>
-                                            <li><a href="">Asus</a></li>
-                                            <li><a href="">HP</a></li>
-                                            <li><a href="">DELL</a></li>
-                                            <li><a href="">MSI</a></li>
-                                            <li><a href="">Lenovo</a></li>                                     
+                                            ${MacBook.data.map(item =>/* html */`
+                                            <li><a href="/${item.name}/${item.id}">${item.name}</a></li>
+                                            `)}                               
                                         </div>
                                         <li class="menu-item-title"><a href="">PHẦN MỀM</a></li>
                                         <div class="menu-item-info grid grid-cols-3 text-sm leading-7 ">

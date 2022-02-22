@@ -17,6 +17,8 @@ import Category from "./admin/categories/Category";
 import ListCategory from "./admin/categories/ListCategory";
 import CartPage from "./client/page/cart";
 import Search from "./client/page/search";
+import { data } from "autoprefixer";
+import ProductCate from "./client/page/productCate";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -57,7 +59,8 @@ router.on({
     "/admin/category/add": () => print(Category),
     "/admin/category": () => print(ListCategory),
     "/cart": () => print(CartPage),
-    "/search": ({ params }) => print(Search, params)
+    "/search": ({ params }) => print(Search, params),
+    "/:name/:id": ({ data }) => print(ProductCate, data.id)
 });
 
 router.resolve();

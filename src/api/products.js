@@ -9,7 +9,11 @@ export const FindOneProduct = (id) => {
     return instance.get(url);
 }
 export const ProductGetById = (id) => {
-    const url = `/products?categorieId=${id}`;
+    const url = `/products?productCateId=${id}`;
+    return instance.get(url);
+}
+export const ProductGetByCate = (id) => {
+    const url = `/productCates/${id}?_embed=products`;
     return instance.get(url);
 }
 export const FindAllProducts = () => {

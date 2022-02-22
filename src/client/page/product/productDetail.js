@@ -5,21 +5,6 @@ import { FindOneProduct } from "../../../api/products";
 import Storage from "../../../utils/Storage";
 const ProductDetail = {
     async render(id) {
-        // $(document).ready(() => {
-        //     $("#read-more").click(function () {
-        //         console.log(1);
-        //         $(this).prev().toggle();
-        //         $(this).siblings(".dots").toggle();
-        //         if ($(this).text() == "Thu gọn") {
-        //             $(this).text("Đọc thêm");
-        //         } else {
-        //             $(this).text("Thu gọn");
-        //         }
-        //     });
-        // });
-
-
-
         const { data } = await FindOneProduct(id);
         const authLogin = Storage.get("user");
         return /* html */ `

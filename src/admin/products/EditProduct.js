@@ -36,7 +36,7 @@ const EditProducts = {
                 name: formHandle.name.value,
                 price: formHandle.price.value,
                 cost: formHandle.cost.value,
-                categorieId: formHandle.type.value
+                productCateId: formHandle.type.value
             }
             UpdateOneProduct(payload).then(res => {
                 location.href = "/admin/products"
@@ -73,7 +73,7 @@ const EditProducts = {
                                     </div>
                                     <select class="mb-3" id="type" name="type">
                                         ${cate.data.map(item =>/* html */ `
-                                            <option value="${item.id}" ${item.id == data.categorieId ? "selected" : ""}>${item.name}</option>
+                                            <option value="${item.id}" ${item.id == data.productCateId ? "selected" : ""}>${item.name}</option>
                                         `).join("")}
                                     </select>
                                     <div class="mb-3">

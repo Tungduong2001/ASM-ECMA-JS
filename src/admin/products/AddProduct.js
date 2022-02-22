@@ -29,7 +29,7 @@ const AddProducts = {
                 const payload = {
                     avatar: res.data.secure_url,
                     name: formHandle.name.value,
-                    categorieId: formHandle.type.value,
+                    productCateId: formHandle.type.value,
                     price: formHandle.price.value,
                     cost: formHandle.cost.value
                 }

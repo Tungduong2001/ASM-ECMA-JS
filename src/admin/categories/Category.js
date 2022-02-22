@@ -28,6 +28,7 @@ const Category = {
                                 <option value="0">Điện thoại</option>
                                 <option value="1">Laptop</option>
                                 <option value="2">Tablet</option>
+                                <option value="3">Đồng hồ</option>
                             </select>
                             <div class="text-right pt-3">
                                 <button type="submit" class="mr-1 uppercase border text-[12px] min-w-[150px] border-gray-400 px-3 py-1 rounded hover:bg-gray-200 shadow-inner hover:shadow-gray-400 hover:shadow-sm hover:border-gray-500 duration-300 inline-block">ADD</button>
