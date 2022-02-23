@@ -1,44 +1,85 @@
 import axios from "axios";
 import { getAllCates } from "../../api/category";
 import { CreateOneProduct, FindAllProducts } from "../../api/products";
+import { reRender } from "../../utils/reRender";
 import HeaderDashboard from "../HeaderDashboard";
+import $ from 'jquery';
+import validate from 'jquery-validation';
 
 const AddProducts = {
     afterRender() {
-        const formHandle = document.querySelector("#formHandle");
+        const formAdd = $("#formHandle");
         const imgPreview = document.querySelector('#previewImage');
         formHandle.addEventListener("change", (e) => {
             imgPreview.src = URL.createObjectURL(formHandle.avatar.files[0])
         });
-
-        formHandle.onsubmit = (e) => {
-            e.preventDefault();
-
-            const formData = new FormData();
-            formData.append("file", formHandle.avatar.files[0]);
-            formData.append("upload_preset", "iscg0aqa");
-
-            axios({
-                url: "https://api.cloudinary.com/v1_1/asm-js-ecma/image/upload",
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/x-www-formendcoded",
+        formAdd.validate({
+            rules: {
+                "avatar": {
+                    required: true,
+                    minlength: 5,
                 },
-                data: formData
-            }).then(res => {
-                const payload = {
-                    avatar: res.data.secure_url,
-                    name: formHandle.name.value,
-                    productCateId: formHandle.type.value,
-                    price: formHandle.price.value,
-                    cost: formHandle.cost.value
-                }
+                "name": {
+                    required: true,
+                    minlength: 5,
+                },
+                "price": {
+                    required: true,
+                    minlength: 5,
+                },
+                "cost": {
+                    required: true,
+                    minlength: 5,
+                },
+            },
+            messages: {
+                "avatar": {
+                    required: "<p class='text-[15px] text-[red]'> Khong duoc de trong truong nay</p>",
+                    minlength: "<p class='text-[15px] text-[red]'> Nhập ít nhất 5 ký tự</p>",
+                },
+                "name": {
+                    required: "<p class='text-[15px] text-[red]'> Khong duoc de trong truong nay</p>",
+                    minlength: "<p class='text-[15px] text-[red]'> Nhập ít nhất 5 ký tự</p>",
+                },
+                "price": {
+                    required: "<p class='text-[15px] text-[red]'> Khong duoc de trong truong nay</p>",
+                    minlength: "<p class='text-[15px] text-[red]'> Nhập ít nhất 5 ký tự</p>",
+                },
+                "cost": {
+                    required: "<p class='text-[15px] text-[red]'> Khong duoc de trong truong nay</p>",
+                    minlength: "<p class='text-[15px] text-[red]'> Nhập ít nhất 5 ký tự</p>",
+                },
+            },
+            submitHandler() {
+                async function addProduct() {
+                    const formData = new FormData();
+                    formData.append("file", formHandle.avatar.files[0]);
+                    formData.append("upload_preset", "iscg0aqa");
 
-                CreateOneProduct(payload).then(res => {
-                    location.href = "/admin/products"
-                })
-            })
-        }
+                    await axios({
+                        url: "https://api.cloudinary.com/v1_1/asm-js-ecma/image/upload",
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-formendcoded",
+                        },
+                        data: formData
+                    }).then(async (res) => {
+                        const payload = {
+                            avatar: res.data.secure_url,
+                            name: formHandle.name.value,
+                            productCateId: formHandle.type.value,
+                            price: formHandle.price.value,
+                            cost: formHandle.cost.value
+                        }
+                        CreateOneProduct(payload).then(async (res) => {
+                            location.href = "/admin/products"
+                            await reRender(AddProducts, "#content")
+                        })
+                    })
+                }
+                addProduct();
+            },
+        });
     },
     async render() {
         const { data } = await FindAllProducts();

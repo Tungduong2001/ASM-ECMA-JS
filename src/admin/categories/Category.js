@@ -1,5 +1,9 @@
 import { addCates } from "../../api/category";
 import HeaderDashboard from "../HeaderDashboard";
+import $ from 'jquery';
+import validate from 'jquery-validation';
+import { reRender } from "../../utils/reRender";
+import { addToCart } from "../../utils/cart";
 const Category = {
     render() {
         return /* html */ `
@@ -22,7 +26,7 @@ const Category = {
                         <form id="formHandle">
                             <div class="mb-3">
                                 <label class="block mb-1 font-semibold">CateName</label>
-                                <input type="text" id="catename" class="px-[10px] py-1 border rounded w-full focus:outline-0">
+                                <input type="text" id="catename" name="name" class="px-[10px] py-1 border rounded w-full focus:outline-0">
                             </div>
                             <select class="mb-3" id="type">
                                 <option value="0">Điện thoại</option>
@@ -43,14 +47,64 @@ const Category = {
         `;
     },
     afterRender() {
-        const formHandle = document.querySelector("#formHandle");
-        formHandle.addEventListener("submit", (e) => {
-            e.preventDefault();
-            addCates({
-                name: document.getElementById("catename").value,
-                type: document.getElementById("type").value
-            }).then(res => window.location.href = "/admin/category")
-        })
-    }
+        const formAdd = $("#formHandle");
+        formAdd.validate({
+            rules: {
+                "name": {
+                    required: true,
+                    minlength: 5,
+                },
+            },
+            messages: {
+                "name": {
+                    required: "<p class='text-[15px] text-[red]'> Khong duoc de trong truong nay</p>",
+                    minlength: "<p class='text-[15px] text-[red]'> Nhập ít nhất 5 ký tự</p>",
+                },
+            },
+            submitHandler() {
+                async function addCate() {
+                    addCates({
+                        name: document.getElementById("catename").value,
+                        type: document.getElementById("type").value
+                    }).then(async (res) => {
+                        document.location.href = "/admin/category";
+                        await reRender(Category, "#content");
+                    });
+                }
+                addCate();
+            },
+        });
+    },
 }
 export default Category;
+// afterRender() {
+//     const formHandle = $("#formHandle");
+//     formHandle.validate({
+//         rules: {
+//             "name": {
+//                 required: true,
+//                 minlength: 5,
+//                 maxlength: 15
+//             }
+//         },
+//         messages: {
+//             "name": {
+//                 required: "Bắt buộc phải nhập trường này anh ei",
+//                 minlength: "Ít nhất phải 5 ký tự anh ei",
+//                 maxlength: "Không được vượt quá 15 ký tự anh ei"
+//             }
+//         },
+//         submitHandler: () => {
+//             async function addPostHandler() {
+//                 addCates({
+//                     name: document.getElementById("catename").value,
+//                     type: document.getElementById("type").value
+//                 }).then((res) => {
+//                     window.location.href("/admin/category")
+//                     reRender(Category, "content")
+//                 })
+//             }
+//             addPostHandler();
+//         }
+//     })
+// }

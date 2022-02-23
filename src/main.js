@@ -17,7 +17,6 @@ import Category from "./admin/categories/Category";
 import ListCategory from "./admin/categories/ListCategory";
 import CartPage from "./client/page/cart";
 import Search from "./client/page/search";
-import { data } from "autoprefixer";
 import ProductCate from "./client/page/productCate";
 
 const router = new Navigo("/", { linksSelector: "a" });
